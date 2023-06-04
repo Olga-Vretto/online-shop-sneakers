@@ -3,7 +3,7 @@ import headerLogo from '../../../assets/images/header-logo.png';
 import cart from '../../../assets/svg/cart.svg';
 import user from '../../../assets/svg/user.svg';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className='header'>
     <div className='header-left'>
@@ -14,7 +14,7 @@ const Header = () => {
       </div>
     </div>
     <ul className='header-right'>
-      <li className='header-right__li'>
+      <li onClick={props.onOpenCart} className='header-right__li'>
         <img src={cart} alt='cart-icon' width={18} height={18} />
         <span>750 грн.</span>
       </li>

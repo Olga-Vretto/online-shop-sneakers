@@ -45,6 +45,7 @@ body {
       display: flex;
       align-items: center;
       gap: 10px;
+      cursor: pointer;
     }
   }
 }
@@ -76,77 +77,14 @@ body {
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 210px;
-  font-size: 14px;
-  border: 1px solid #f3f3f3;
-  border-radius: 40px;
-  padding: 30px 30px 34px;
-  line-height: 16px;
-  letter-spacing: 0.5px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.129);
-  }
-
-  &-image {
-    width: 133px;
-    height: 112px;
-  }
-  &-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &-text {
-    display: flex;
-    flex-direction: column;
-    &__txt {
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-  }
-  &-button {
-    width: 32px;
-    height: 32px;
-    background: #ffffff;
-    border: 1px solid #f2f2f2;
-    border-radius: 8px;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    &:hover {
-      background-color: #efeded8b;
-    }
-  }
-}
-
-.heart {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  padding: 7px;
-  border: 1px solid #f0ebeb;
-  border-radius: 7px;
-  cursor: pointer;
-}
-
 .sneakers {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 36px;
 }
 
 .bold {
   font-weight: 700;
-}
-.grey {
-  color: #bdbdbd;
 }
 
 // drawer styling
@@ -198,7 +136,7 @@ body {
 
 .cart-items {
   overflow: auto;
-  height: 520px;
+  margin-bottom: 30px;
 }
 
 .cart {
@@ -239,6 +177,7 @@ body {
 .cart-bottom {
   display: flex;
   flex-direction: column;
+  
   gap: 20px;
 }
 
@@ -269,5 +208,26 @@ body {
   .dashed-line {
     border-bottom: 1px dashed #dfdfdf;
     width: 50%;
+  }
+}
+
+// empty block
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  h2 {
+    font-weight: 600;
+    font-size: 22px;
+    margin: 21px 0 9px;
+    p {
+      font-size: 16px;
+      color: black;
+      opacity: 0.4;
+      margin-bottom: 50px;
+    }
   }
 }
